@@ -1,0 +1,93 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Mes vidéos - FIRRAS GUELMAMI</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <nav>
+    <a href="index.html">Accueil</a>
+    <a href="gallery.html">Photos</a>
+    <a href="videos.html">Vidéos</a>
+    <a href="index.html#liens">Liens</a>
+    <a href="index.html#apropos">À propos</a>
+</nav>
+
+    <a href="index.html" class="back-button">
+        ← Retour au menu
+    </a>
+
+    <h1>Mes vidéos</h1>
+    <p>Bienvenue dans ma galerie vidéo !</p>
+
+    <!-- Video thumbnails -->
+
+    <div class="video-gallery">
+
+        <video src="videos/video1.mp4"
+               preload="metadata"
+               muted
+               playsinline
+               onclick="openVideo(0)">
+        </video>
+
+        <video src="videos/video2.mp4"
+               preload="metadata"
+               muted
+               playsinline
+               onclick="openVideo(1)">
+        </video>
+
+        <video src="videos/video3.mp4"
+               preload="metadata"
+               muted
+               playsinline
+               onclick="openVideo(2)">
+        </video>
+
+    </div>
+
+    <!-- Fullscreen video viewer -->
+
+   
+<div id="video-viewer" class="video-viewer">
+
+    <button class="video-close"
+            onclick="closeVideo()"
+            aria-label="Fermer la vidéo">
+        &times;
+    </button>
+
+    <button class="video-arrow video-prev"
+            onclick="changeVideo(-1)"
+            aria-label="Vidéo précédente">
+        &#10094;
+    </button>
+
+    <video id="active-video"
+           controls
+           playsinline
+           preload="metadata">
+    </video>
+
+    <button class="video-arrow video-next"
+            onclick="changeVideo(1)"
+            aria-label="Vidéo suivante">
+        &#10095;
+    </button>
+
+</div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Galerie photos - FIRRAS GUELMAMI</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <nav>
+    <a href="index.html">Accueil</a>
+    <a href="gallery.html">Photos</a>
+    <a href="videos.html">Vidéos</a>
+    <a href="index.html#liens">Liens</a>
+    <a href="index.html#apropos">À propos</a>
+</nav>
+
+    <a href="index.html" class="back-button">
+        ← Retour au menu
+    </a>
+
+    <h1>Galerie photos</h1>
+    <div class="gallery">
+
+    <img src="images/photo1.jpg" alt="Photo 1" onclick="openGallery(0)">
+    <img src="images/photo2.jpg" alt="Photo 2" onclick="openGallery(1)">
+    <img src="images/photo3.jpg" alt="Photo 3" onclick="openGallery(2)">
+    <img src="images/photo4.jpg" alt="Photo 4" onclick="openGallery(3)">
+    <img src="images/photo5.jpg" alt="Photo 5" onclick="openGallery(4)">
+    <img src="images/photo6.jpg" alt="Photo 6" onclick="openGallery(5)">
+    <img src="images/photo7.jpg" alt="Photo 7" onclick="openGallery(6)">
+    <img src="images/photo8.jpg" alt="Photo 8" onclick="openGallery(7)">
+
+</div>
+
+<div id="viewer" class="viewer">
+
+    <span class="close" onclick="closeGallery()">&times;</span>
+
+    <button class="previous" onclick="changePhoto(-1)">&#10094;</button>
+
+    <img id="viewer-image" src="" alt="Photo agrandie">
+
+    <button class="next" onclick="changePhoto(1)">&#10095;</button>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
